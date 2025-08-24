@@ -1,5 +1,8 @@
 RewriteEngine On
 
+# Set landing page as default entry point
+DirectoryIndex landing.php index.php
+
 # Handle Authorization Header
 RewriteCond %{HTTP:Authorization} .
 RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
@@ -63,4 +66,4 @@ Options -Indexes
     ExpiresByType text/plain "access plus 1 month"
     ExpiresByType application/pdf "access plus 1 month"
     ExpiresByType application/x-shockwave-flash "access plus 1 month"
-</IfModule> 
+</IfModule>
